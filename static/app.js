@@ -8,4 +8,10 @@ d3.json('data/samples.json').then(bellybuttonData) => {
         SelectionBox = d3.select('#selDataset');
         SelectionBox.append('option').text(idList[i]);
     }
+
+    updatePlots(0)
+
+    function updatePlots(index) {
+        
+    }
 }
