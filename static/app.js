@@ -1,17 +1,9 @@
-d3.json('data/samples.json').then(bellybuttonData) => {
-    window.bellybuttonData = bellybuttonData;
-    console.log(bellybuttonData);
-    var data = bellybuttonData;
+// Create function to plot data for our charts
+function plot(id) {
 
-    var idList = data.names;
-    for (var i = 0; i < idList.length; i++) {
-        SelectionBox = d3.select('#selDataset');
-        SelectionBox.append('option').text(idList[i]);
+// Using the D3 library to load our samples.json file
+    d3.json('data/samples.json').then((bellyButtonData)=> {
+        var data = bellyButtonData;
+        console.log(data)
     }
-
-    updatePlots(0)
-
-    function updatePlots(index) {
-        
-    }
-}
+};
