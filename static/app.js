@@ -6,9 +6,14 @@ function plot(id) {
         var data = bellyButtonData;
         console.log(data)
 
-        var washingFreq = data.metadata.map(d => d.washingFreq)
+        var washingFreq = data.metadata.map(wash => wash.washingFreq)
         console.log(`The washing frequency is: ${washingFreq}`)
 
+        var sampleValues = data.samples.filter(sample => sample.id.toString() === id)[0];
+        console.log(sampleValues);
+
+        // get top 10
         
+
     }
 };
