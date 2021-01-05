@@ -12,8 +12,17 @@ function plot(id) {
         var sampleValues = data.samples.filter(sample => sample.id.toString() === id)[0];
         console.log(sampleValues);
 
-        // get top 10
-        
+        // refine by top 10
+        var topTen = sampleValues.sample_values.slice(0, 10).reverse();
+
+        var topTenOtu = (sampleValues.otu_ids.slice(0, 10)).reverse();
+
+        var IdOtu = topTenOtu.map(data => 'OTU' + data)
+        console.log(IdOtu)
+
+        // grab the labels for top 10 for the plots
+        var labels = sampleValues.otu_labels.slice(0, 10);
+        console.log(sampleValues)
 
     }
 };
