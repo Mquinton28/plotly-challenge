@@ -5,5 +5,10 @@ function plot(id) {
     d3.json('data/samples.json').then((bellyButtonData)=> {
         var data = bellyButtonData;
         console.log(data)
+
+        var washingFreq = data.metadata.map(d => d.washingFreq)
+        console.log(`The washing frequency is: ${washingFreq}`)
+
+        
     }
 };
