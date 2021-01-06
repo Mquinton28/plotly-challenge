@@ -72,7 +72,7 @@ function getPlot(id) {
             {
                 domain: { x: [0, 1], y: [0, 1] },
                 value: washingFreq,
-                title: {text: 'Washing Frequency'},
+                title: {text: 'Belly Button Washing Frequency'},
                 type: 'indicator',
                 mode: 'guage+number',
                 guage: {
