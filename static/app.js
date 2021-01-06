@@ -47,6 +47,17 @@ function getPlot(id) {
 
         Plotly.newPlot('bar', data, layout);
 
+        var traceBubble = {
+            x: sampleValues.otu_ids,
+            y: sampleValues.sample_values,
+            mode: 'markers',
+            marker: {
+                size: sampleValues.sample_values,
+                color: sampleValues.otu_ids
+            },
+            text: sampleValues.otu_labels
+        };
+
     });
 
 }  
